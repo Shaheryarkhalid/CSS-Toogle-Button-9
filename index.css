@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.Main-Section{
+    height: 100vh;
+    min-width:100%;
+    background-image: radial-gradient(#4d4b4d, #323132);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Main-Section .Content-Wrapper{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr ;
+    gap:20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:1210px)
+{
+    .Main-Section{
+        height: auto;
+        min-width: 100%;
+    }
+    .Main-Section .Content-Wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .Main-Section .Content-Wrapper .Toogle-t{
+        min-height: 300px;
+        width: 80%;
+    }
+    .Toogle-5,.Toogle-6,.Toogle-7,.Toogle-8{
+        min-height: 300px;
+        width: 80%;
+    }
+}
+.Main-Section .Content-Wrapper .Toogle-t{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #222;
+}
+.Content-Wrapper .Toogle-t .Toogle-Switch{
+    position: absolute;
+    top:0;
+    opacity: 0;
+}
+.Content-Wrapper .Toogle-t .Label-Toogle-Switch{
+    height: 70px;
+    width: 150px;
+    background-color: #3f3d3f;
+    border-radius: 50px;
+    margin:0 20px;
+    border: 2px solid #323133;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    box-shadow: 0 0 20px #444;
+}
+.Content-Wrapper .Toogle-t .Label-Toogle-Switch .Toogle{
+    position: relative;
+    left: 0;
+    height: 67px;
+    width: 67px;
+    background-color: #777;
+    border-radius: 50%;
+    transition: all 0.5s linear;
+    
+}
+.Content-Wrapper .Toogle-t p{
+    color:#fff;
+    font-size: 1.5rem;
+}
+.Content-Wrapper .Toogle-t .ON{
+    user-select:none;
+}
+.Content-Wrapper .Toogle-t .OFF{
+    user-select:none;
+}
+/*..........................Toogle-1*/
+.Content-Wrapper .Toogle-1 .Toogle-Switch:checked ~ .ON{
+    text-shadow: 0 0 10px  #fff;
+}
+.Content-Wrapper .Toogle-1 .Toogle-Switch:checked ~ .Label-Toogle-Switch .Toogle{
+    left:83px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+.Content-Wrapper .Toogle-1 .Toogle-Switch:checked ~ .Label-Toogle-Switch {
+    background-color: #aaa;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 20px #aaa;
+}
+.Content-Wrapper .Toogle-1 .Toogle-Switch:not(:checked) ~ .OFF{
+    text-shadow: 0 0 10px  #fff;
+}
+.Main-Section .Content-Wrapper .Toogle-9{
+    background-color: #ddd;
+}
+.Main-Section .Content-Wrapper .Toogle-9 .Label-Toogle-Switch{
+    position: relative;
+    width: 110px;
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    box-shadow:0 2px 0 #ccc inset,
+               0 -2px 2px #ddd inset,
+               2px 0 2px #ddd inset,
+               -2px 0 2px #ddd inset;
+    margin:40px;
+}
+.Main-Section .Content-Wrapper .Toogle-9 .Label-Toogle-Switch .Toogle{
+    position: absolute;
+    border-radius: 0;
+    top:-2px;
+    left:-10px;
+    height: 71px;
+    background-color: #cc0966;
+    border-bottom: 1px solid #f2137d;
+    box-shadow:  0 3px  1px #99074d,
+    3px 0 20px #aaa,
+    -3px 0 20px #aaa  ;
+}   
+.Main-Section .Content-Wrapper .Toogle-9 .Label-Toogle-Switch .Toogle span{
+   position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    top:45%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    user-select: none;
+    
+}
+.Main-Section .Content-Wrapper .Toogle-9 .Toogle-Switch:checked~ .Label-Toogle-Switch .Toogle{
+    left:60px;
+    background-color: #5eb9cc;
+    border-bottom: 1px solid #71c1d2;
+    box-shadow:  0 3px  1px #3ba5bc,
+    3px 0 20px #aaa,
+    -3px 0 20px #aaa  ;
+}
